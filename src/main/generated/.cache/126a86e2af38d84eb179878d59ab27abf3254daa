@@ -1,0 +1,4 @@
+// 1.21.7	-999999999-01-01T00:00:00	MoreFood/minecraft:entity Loot Table
+a799abf1a671d4e694fbc0c3a202ce1a661c3a87 data/minecraft/loot_table/entities/cow.json
+e8bbbe57884830a8c67bfc379ce6f77045c099aa data/minecraft/loot_table/entities/pig.json
+bb6636c79a591f63a5a755e8cc36a66cc0e17eb8 data/minecraft/loot_table/entities/sheep.json
