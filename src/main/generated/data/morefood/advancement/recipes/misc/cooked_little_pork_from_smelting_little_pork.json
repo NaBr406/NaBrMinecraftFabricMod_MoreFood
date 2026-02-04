@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_little_pork": {
+      "conditions": {
+        "items": [
+          {
+            "items": "more_food:little_pork"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "morefood:cooked_little_pork_from_smelting_little_pork"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_little_pork"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "morefood:cooked_little_pork_from_smelting_little_pork"
+    ]
+  }
+}
