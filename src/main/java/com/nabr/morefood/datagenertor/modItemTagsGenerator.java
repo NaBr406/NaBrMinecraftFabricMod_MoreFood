@@ -17,7 +17,15 @@ public class modItemTagsGenerator extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getTagBuilder(Tags.MOD_MEAT)
-                .add(Registries.ITEM.getId(ItemMain.LITTLE_BEEF));
+                .add(Registries.ITEM.getId(ItemMain.LITTLE_BEEF))
+                .add(Registries.ITEM.getId(ItemMain.LITTLE_MUTTON))
+                .add(Registries.ITEM.getId(ItemMain.LITTLE_CHICKEN_MEAT))
+                .add(Registries.ITEM.getId(ItemMain.LITTLE_PORK));
+        getTagBuilder(Tags.MOD_COOKED_MEAT)
+                .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_CHICKEN_MEAT))
+                .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_BEEF))
+                .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_MUTTON))
+                .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_PORK));
 
     }
 }

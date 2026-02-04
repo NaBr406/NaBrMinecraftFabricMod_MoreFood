@@ -1,6 +1,8 @@
 package com.nabr.morefood.datagenertor;
 
+import com.nabr.morefood.item.ItemGroup;
 import com.nabr.morefood.item.ItemMain;
+import com.nabr.morefood.tags.Tags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -53,6 +55,11 @@ public class modRecipeGenerator extends FabricRecipeProvider {
                         "newFood"
                 );
                 //合成配方
+                createShapeless(RecipeCategory.FOOD , ItemMain.GROUND_MEAT , 4)
+                        .input(Tags.MOD_MEAT)
+                        .group("more_food")
+                        .criterion(hasItem(ItemMain.LITTLE_BEEF),conditionsFromItem(ItemMain.LITTLE_BEEF))
+                        .offerTo(exporter);
             }
         };
     }
