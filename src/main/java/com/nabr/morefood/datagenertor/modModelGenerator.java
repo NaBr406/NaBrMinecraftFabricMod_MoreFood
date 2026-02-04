@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.item.BlockItem;
 
 //数据生成模型
 public class modModelGenerator extends FabricModelProvider {
@@ -34,5 +35,6 @@ public class modModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(ItemMain.LIGHTNING_APPLE , Models.GENERATED);
         itemModelGenerator.register(ItemMain.NETHERITE_APPLE , Models.GENERATED);
         itemModelGenerator.register(ItemMain.REDSTONE_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.APPLE_BLOCK.asItem(), Models.CUBE);
     }
 }

@@ -1,6 +1,8 @@
 package com.nabr.morefood.item;
 
-import com.nabr.morefood.item.useresult.LightningApple;
+//import com.nabr.morefood.item.useresult.InfiniteApple;
+//import com.nabr.morefood.item.useresult.LightningApple;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -11,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ItemMain {
-    private ItemMain(){}
+    public ItemMain(){}
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         // 创建注册表键 (RegistryKey): 指定物品注册表和具体ID
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of("more_food", path));
@@ -47,9 +49,15 @@ public class ItemMain {
 
     //雷击苹果
     public static final Item LIGHTNING_APPLE = register("lightning_apple",
-            LightningApple::new,new Item.Settings().
+            Item::new,new Item.Settings().
                     maxCount(64).
-                    food(FoodComponents.APPLE));
+                    food(FoodCharacteristic.RAW_MEAT_COMPONENT));
+
+    //无限苹果
+    public static final Item INFINITE_APPLE = register("infinite_apple",
+            Item::new , new Item.Settings().
+                    maxCount(1).
+                    food(FoodCharacteristic.RAW_MEAT_COMPONENT));
 
     //apple_sword 苹果剑
     public static final Item APPLE_SWORD = register(

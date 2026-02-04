@@ -24,7 +24,7 @@ public class ItemGroup {
                 entries.add(ItemMain.COOKED_LITTLE_MUTTON);
                 entries.add(ItemMain.COOKED_LITTLE_PORK);
                 entries.add(ItemMain.COOKED_LITTLE_CHICKEN_MEAT);
-                entries.add(ItemMain.DIAMOND_APPLE); // 添加一个物品
+                entries.add(ItemMain.DIAMOND_APPLE);
                 entries.add(ItemMain.NETHERITE_APPLE);
                 entries.add(ItemMain.EMERALD_APPLE);
                 entries.add(ItemMain.REDSTONE_APPLE);
@@ -32,7 +32,7 @@ public class ItemGroup {
                 entries.add(ItemMain.APPLE_SWORD);
                 entries.add(ItemMain.GREEN_APPLE);
                 entries.add(ItemMain.LIGHTNING_APPLE);
-
+                entries.add(ItemMain.INFINITE_APPLE);
             })
             .build();
     public static void initialize(){
