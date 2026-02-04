@@ -42,4 +42,8 @@ public class ItemMain {
             .maxCount(64).food(FoodCharacteristic.RAW_MEAT_COMPONENT));
     public static final Item COOKED_LITTLE_CHICKEN_MEAT = register("cooked_little_chicken_meat",Item::new , new Item.Settings()
             .maxCount(64).food(FoodCharacteristic.COOKED_MEAT_COMPONENT));
+
+    //肉沫
+    public static final Item GROUND_MEAT = register("ground_meat",Item::new , new Item.Settings()
+            .maxCount(64));
 }

@@ -13,7 +13,8 @@ public class Tags {
             RegistryKeys.ITEM,
             Identifier.tryParse("mod_meat")
     );
-    private static TagKey<Item> createTag(String name) {
-        return TagKey.of(RegistryKeys.ITEM, Identifier.of("my_mod", name));
-    }
+    public static final TagKey<Item> MOD_COOKED_MEAT = TagKey.of(
+            RegistryKeys.ITEM,
+            Identifier.tryParse("mod_cooked_meat")
+    );
 }
