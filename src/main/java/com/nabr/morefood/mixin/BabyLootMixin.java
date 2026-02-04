@@ -15,8 +15,6 @@ public abstract class BabyLootMixin {
 
     @Inject(method = "shouldDropLoot", at = @At("HEAD"), cancellable = true)
     private void BabyLoot(CallbackInfoReturnable<Boolean> cir) {
-        // 关键：我们只需要对“被动生物”（猪、牛、羊等）放行
-        // 使用 (Object)this 强转是 Mixin 的标准操作
                 cir.setReturnValue(true); // 强制返回 true，让逻辑继续走下去读 JSON
     }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_little_beef": {
+      "conditions": {
+        "items": [
+          {
+            "items": "more_food:little_beef"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "morefood:ground_meat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_little_beef"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "morefood:ground_meat"
+    ]
+  }
+}

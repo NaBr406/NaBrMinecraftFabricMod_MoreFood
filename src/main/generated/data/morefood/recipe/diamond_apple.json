@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "more_apple",
+  "key": {
+    "a": "minecraft:apple",
+    "d": "minecraft:diamond"
+  },
+  "pattern": [
+    " d ",
+    "dad",
+    " d "
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:diamond_apple"
+  }
+}

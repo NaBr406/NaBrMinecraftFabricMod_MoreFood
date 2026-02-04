@@ -2,6 +2,7 @@ package com.nabr.morefood;
 
 import com.nabr.morefood.item.ItemGroup;
 import com.nabr.morefood.item.ItemMain;
+import com.nabr.morefood.item.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -24,5 +25,6 @@ public class MoreFood implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ItemMain.initialize();
 		ItemGroup.initialize();
+		ModBlocks.initialize();
 	}
 }
