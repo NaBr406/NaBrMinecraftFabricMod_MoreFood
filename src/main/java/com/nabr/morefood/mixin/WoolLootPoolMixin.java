@@ -15,7 +15,7 @@ public abstract class WoolLootPoolMixin {
 
    @Shadow public abstract DyeColor getColor();
 
-    @Inject(method = "dropLoot", at = @At("TAIL"), cancellable = true)
+    //@Inject(method = "dropLoot", at = @At("TAIL"), cancellable = true)
     private void woolLootPool(DamageSource source, boolean causedByPlayer, CallbackInfo ci) {
         DyeColor color = this.getColor();
     }
