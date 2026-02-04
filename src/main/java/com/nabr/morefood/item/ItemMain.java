@@ -47,6 +47,8 @@ public class ItemMain {
     public static final Item GREEN_APPLE = register("green_apple",Item::new, new Item.Settings().maxCount(64).
             food(FoodComponents.APPLE));
 
+
+
     //雷击苹果
     public static final Item LIGHTNING_APPLE = register("lightning_apple",
             Item::new,new Item.Settings().

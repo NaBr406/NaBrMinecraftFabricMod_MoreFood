@@ -29,7 +29,7 @@ public class AppleResultMixin {
                 lightningBolt.setPosition(frontOfPlayer.toCenterPos());
                 world.spawnEntity(lightningBolt);
                 String UserName = player.getName().getString();
-                Text eatFinishText = Text.literal(UserName+"吃掉了闪电苹果 电闪雷鸣");
+                Text eatFinishText = Text.literal("哪在打雷");
                 player.sendMessage(eatFinishText,false);
             }
         }
