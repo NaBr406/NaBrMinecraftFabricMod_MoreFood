@@ -1,5 +1,7 @@
 package com.nabr.morefood.item;
 
+import com.nabr.morefood.item.useresult.LightningApple;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
@@ -19,6 +21,43 @@ public class ItemMain {
     public static void initialize() {
         System.out.println("物品已加载!");
     }
+    //注册diamond apple
+    public static final Item DIAMOND_APPLE = register("diamond_apple",Item::new, new Item.Settings().maxCount(64).
+            food(FoodCharacteristic.DIAMOND_APPLE_COMPONENT,
+                    FoodCharacteristic.DIAMOND_APPLE_CONSUMABLE_COMPONENT));
+
+    //netherite apple 下界合金苹果
+    public static final Item NETHERITE_APPLE = register("netherite_apple",Item::new, new Item.Settings().maxCount(1).
+            food(FoodCharacteristic.NETHERITE_APPLE_COMPONENT,
+                    FoodCharacteristic.NETHERITE_APPLE_CONSUMABLE_COMPONENT));
+
+    //emerald apple 绿宝石苹果
+    public static final Item EMERALD_APPLE = register("emerald_apple",Item::new, new Item.Settings().maxCount(64).
+            food(FoodCharacteristic.DIAMOND_APPLE_COMPONENT,
+                    FoodCharacteristic.EMERALD_APPLE_CONSUMABLE_COMPONENT));
+
+    //Redstone_apple 红石苹果
+    public static final Item REDSTONE_APPLE = register("redstone_apple",Item::new, new Item.Settings().maxCount(64).
+            food(FoodCharacteristic.DIAMOND_APPLE_COMPONENT,
+                    FoodCharacteristic.REDSTONE_APPLE_CONSUMABLE_COMPONENT));
+
+    //青苹果
+    public static final Item GREEN_APPLE = register("green_apple",Item::new, new Item.Settings().maxCount(64).
+            food(FoodComponents.APPLE));
+
+    //雷击苹果
+    public static final Item LIGHTNING_APPLE = register("lightning_apple",
+            LightningApple::new,new Item.Settings().
+                    maxCount(64).
+                    food(FoodComponents.APPLE));
+
+    //apple_sword 苹果剑
+    public static final Item APPLE_SWORD = register(
+            "apple_sword",
+            Item::new,
+            new Item.Settings().
+                    sword(ModToolMaterial.APPLE_SWORD_MATERIAL, 1f, 1f)
+    );
     //小猪肉
     public static final Item LITTLE_PORK = register("little_pork", Item::new , new Item.Settings()
             .maxCount(64).food(FoodCharacteristic.RAW_MEAT_COMPONENT));

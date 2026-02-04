@@ -6,5 +6,13 @@
   "item.more_food.little_beef": "小牛肉",
   "item.more_food.cooked_little_beef": "熟小牛肉",
   "item.more_food.little_chicken_meat": "熟小鸡肉",
-  "item.more_food.cooked_little_chicken_meat": "熟小鸡肉"
+  "item.more_food.cooked_little_chicken_meat": "熟小鸡肉",
+  "item.more_food.diamond_apple": "钻石苹果",
+  "item.more_food.netherite_apple": "下界合金苹果",
+  "item.more_food.emerald_apple": "绿宝石苹果",
+  "item.more_food.redstone_apple": "红石苹果",
+  "item.more_food.apple_block": "苹果块",
+  "block.more_food.apple_block": "苹果块",
+  "item.more_food.apple_sword": "苹果剑",
+  "item.more_food.green_apple": "青苹果"
 }

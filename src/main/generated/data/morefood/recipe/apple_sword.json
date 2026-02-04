@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "more_apple",
+  "key": {
+    "A": "more_food:apple_block",
+    "W": "minecraft:stick"
+  },
+  "pattern": [
+    " A ",
+    " A ",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:apple_sword"
+  }
+}

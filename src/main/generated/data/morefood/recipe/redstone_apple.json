@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "more_apple",
+  "key": {
+    "A": "minecraft:apple",
+    "E": "minecraft:redstone"
+  },
+  "pattern": [
+    "EEE",
+    "EAE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:redstone_apple"
+  }
+}

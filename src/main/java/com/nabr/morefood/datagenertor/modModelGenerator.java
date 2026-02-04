@@ -1,6 +1,7 @@
 package com.nabr.morefood.datagenertor;
 
 import com.nabr.morefood.item.ItemMain;
+import com.nabr.morefood.item.ModBlocks;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
@@ -14,7 +15,7 @@ public class modModelGenerator extends FabricModelProvider {
     }
     //方块模型
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator){
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APPLE_BLOCK);
     }
     //物品模型
     public void generateItemModels(ItemModelGenerator itemModelGenerator){
@@ -26,5 +27,12 @@ public class modModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(ItemMain.LITTLE_CHICKEN_MEAT , Models.GENERATED);
         itemModelGenerator.register(ItemMain.LITTLE_PORK , Models.GENERATED);
         itemModelGenerator.register(ItemMain.LITTLE_BEEF , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.APPLE_SWORD , Models.HANDHELD);
+        itemModelGenerator.register(ItemMain.DIAMOND_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.EMERALD_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.GREEN_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.LIGHTNING_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.NETHERITE_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.REDSTONE_APPLE , Models.GENERATED);
     }
 }
