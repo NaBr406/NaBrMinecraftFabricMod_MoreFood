@@ -7,6 +7,7 @@ import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
 
+//数据生成模型
 public class modModelGenerator extends FabricModelProvider {
     public modModelGenerator(FabricDataOutput output){
         super(output);
@@ -15,6 +16,7 @@ public class modModelGenerator extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator){
 
     }
+    //物品模型
     public void generateItemModels(ItemModelGenerator itemModelGenerator){
         itemModelGenerator.register(ItemMain.COOKED_LITTLE_BEEF , Models.GENERATED);
         itemModelGenerator.register(ItemMain.COOKED_LITTLE_MUTTON , Models.GENERATED);
