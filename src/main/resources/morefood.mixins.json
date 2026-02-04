@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin",
-		"BabyLootMixin"
+		"BabyLootMixin",
+		"AppleResultMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
+/*
 public class LightningApple extends Item {
 
     public LightningApple(Settings settings) {
@@ -32,6 +32,7 @@ public class LightningApple extends Item {
                 //zombie.setPosition(player.getPos());
                 lightningBolt.setPosition(frontOfPlayer.toCenterPos());
                 world.spawnEntity(lightningBolt);
+
                 //world.spawnEntity(zombie);
             }
         }
@@ -40,3 +41,5 @@ public class LightningApple extends Item {
         return returnStack;
     }
 }
+
+ */

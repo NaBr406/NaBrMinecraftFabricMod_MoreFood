@@ -14,6 +14,7 @@ public class FoodCharacteristic {
             .nutrition(2)
             //饱和度
             .saturationModifier(2)
+            .alwaysEdible()
             .build();
 
     public static final FoodComponent COOKED_MEAT_COMPONENT = new FoodComponent.Builder()

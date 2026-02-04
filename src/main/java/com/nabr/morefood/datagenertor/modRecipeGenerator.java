@@ -137,6 +137,15 @@ public class modRecipeGenerator extends FabricRecipeProvider {
                         .group("more_apple")
                         .criterion(hasItem(Items.APPLE), conditionsFromItem(ModBlocks.APPLE_BLOCK))
                         .offerTo(exporter);
+
+                createShapeless(RecipeCategory.FOOD , ItemMain.INFINITE_APPLE , 1)
+                        .input(ItemMain.DIAMOND_APPLE)
+                        .input(ItemMain.EMERALD_APPLE)
+                        .input(ItemMain.NETHERITE_APPLE)
+                        .input(ItemMain.REDSTONE_APPLE)
+                        .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                        .group("more_apple")
+                        .offerTo(exporter);
             }
 
         };
