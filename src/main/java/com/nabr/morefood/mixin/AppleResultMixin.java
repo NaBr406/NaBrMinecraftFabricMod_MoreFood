@@ -1,6 +1,7 @@
 package com.nabr.morefood.mixin;
 
 import com.nabr.morefood.item.ItemMain;
+import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
@@ -33,11 +34,17 @@ public class AppleResultMixin {
                 player.sendMessage(eatFinishText,false);
             }
         }
-        if(!world.isClient && stack.isOf(ItemMain.INFINITE_APPLE)){
+        if(!world.isClient && stack.isOf(ItemMain.INFINITE_APPLE ) && !user.isInCreativeMode()){
             if(user instanceof PlayerEntity player){
                 ItemStack drop = new ItemStack(ItemMain.INFINITE_APPLE , 1);
                 player.getInventory().insertStack(drop);
                 Text eatFinishText = Text.literal("我又出来了");
+                player.sendMessage(eatFinishText,false);
+            }
+        }
+        if(!world.isClient && stack.isOf(ItemMain.REDSTONE_APPLE )){
+            if(user instanceof PlayerEntity player){
+                Text eatFinishText = Text.literal("阿玛特拉斯");
                 player.sendMessage(eatFinishText,false);
             }
         }

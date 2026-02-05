@@ -7,13 +7,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TexturedModel;
-import net.minecraft.item.BlockItem;
-import net.minecraft.util.Identifier;
 
 //数据生成模型
-public class modModelGenerator extends FabricModelProvider {
-    public modModelGenerator(FabricDataOutput output){
+public class ModModelGenerator extends FabricModelProvider {
+    public ModModelGenerator(FabricDataOutput output){
         super(output);
     }
     //方块模型

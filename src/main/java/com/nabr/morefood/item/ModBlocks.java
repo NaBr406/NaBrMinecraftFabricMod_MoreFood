@@ -68,9 +68,9 @@ public class ModBlocks {
             Block::new,
             AbstractBlock.Settings.create()
                     //硬度 抗爆
-                    .strength(2.0f,1.0f)
+                    .strength(0.5f,1.0f)
                     //使用工具掉落
-                    .requiresTool()
+                    //.requiresTool()
                     //放置破坏声音
                     .sounds(BlockSoundGroup.WOOD),
             //注册对应方块物品

@@ -3,7 +3,7 @@
   "category": "food",
   "cookingtime": 200,
   "experience": 0.5,
-  "group": "newFood",
+  "group": "more_food",
   "ingredient": "more_food:little_chicken_meat",
   "result": {
     "id": "more_food:cooked_little_chicken_meat"
