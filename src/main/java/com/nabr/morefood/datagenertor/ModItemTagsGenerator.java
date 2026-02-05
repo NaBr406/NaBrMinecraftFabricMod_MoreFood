@@ -9,8 +9,8 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class modItemTagsGenerator extends FabricTagProvider.ItemTagProvider {
-    public modItemTagsGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class ModItemTagsGenerator extends FabricTagProvider.ItemTagProvider {
+    public ModItemTagsGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -26,6 +26,13 @@ public class modItemTagsGenerator extends FabricTagProvider.ItemTagProvider {
                 .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_BEEF))
                 .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_MUTTON))
                 .add(Registries.ITEM.getId(ItemMain.COOKED_LITTLE_PORK));
-
+        getTagBuilder(Tags.APPLE)
+                .add(Registries.ITEM.getId(ItemMain.DIAMOND_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.EMERALD_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.GREEN_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.INFINITE_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.LIGHTNING_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.NETHERITE_APPLE))
+                .add(Registries.ITEM.getId(ItemMain.REDSTONE_APPLE));
     }
 }

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "more_apple",
+  "group": "more_food",
   "ingredients": [
     "minecraft:apple",
     "minecraft:netherite_ingot"

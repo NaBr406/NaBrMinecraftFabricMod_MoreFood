@@ -21,10 +21,11 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDropWithSilkTouch(ModBlocks.APPLE_BLOCK);
+        addDrop(ModBlocks.APPLE_BLOCK , Items.APPLE);
+
+        /*
         // addDrop 是 LootTableProvider 内的快捷方法，会自动为方块生成掉落其自身的表
-
-
-        // 这里我们自定义一个掉落表 LootTable.builder()，并手动创建一个战利品池 (LootPool.builder())
         // addSurvivesExplosionCondition(...) 用于确保方块在爆炸摧毁时仍有掉落几率
         LootPool.Builder normalDropPool = LootPool.builder()
                 .rolls(new UniformLootNumberProvider(
@@ -42,6 +43,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
                 //欠一个精准采集掉落原物
                 //.pool(silkTouchDropPool)
         );
+
+         */
 
     }
 

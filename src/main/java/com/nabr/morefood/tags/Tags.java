@@ -17,4 +17,8 @@ public class Tags {
             RegistryKeys.ITEM,
             Identifier.tryParse("mod_cooked_meat")
     );
+    public static final TagKey<Item> APPLE = TagKey.of(
+            RegistryKeys.ITEM,
+            Identifier.tryParse("apple")
+    );
 }

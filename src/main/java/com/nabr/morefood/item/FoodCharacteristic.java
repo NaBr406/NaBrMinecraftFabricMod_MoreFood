@@ -1,9 +1,9 @@
 package com.nabr.morefood.item;
 
+import com.nabr.morefood.MoreFood;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
-import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
@@ -73,5 +73,7 @@ public class FoodCharacteristic {
     public static final ConsumableComponent REDSTONE_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.GLOWING,
                     30*20, 1), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.AMATERASU,
+                    30*20 , 1) , 1.0F))
             .build();
 }
