@@ -8,8 +8,8 @@
 		"Me!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/NaBr406/NaBrMinecraftFabricMod_MoreFood",
+		"sources": "https://github.com/NaBr406/NaBrMinecraftFabricMod_MoreFood"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/more_food/icon.png",
