@@ -47,7 +47,14 @@ public class ItemMain {
     public static final Item GREEN_APPLE = register("green_apple",Item::new, new Item.Settings().maxCount(64).
             food(FoodComponents.APPLE));
 
+    // 末影苹果
+    public static final Item ENDER_APPLE = register("ender_apple" , Item::new , new Item.Settings().maxCount(64).
+            food(FoodComponents.APPLE));
 
+    //黑曜石苹果
+    public static final Item OBSIDIAN_APPLE = register("obsidian_apple" , Item::new , new Item.Settings().maxCount(64).
+            food(FoodComponents.APPLE,
+                    FoodCharacteristic.OBSIDIAN_APPLE_CONSUMABLE_COMPONENT));
 
     //雷击苹果
     public static final Item LIGHTNING_APPLE = register("lightning_apple",
@@ -95,4 +102,12 @@ public class ItemMain {
     //肉沫
     public static final Item GROUND_MEAT = register("ground_meat",Item::new , new Item.Settings()
             .maxCount(64));
+
+    //肉丸
+    public static final Item MEATBALL = register("meatball",Item::new , new Item.Settings()
+            .maxCount(64).food(FoodComponents.COOKED_BEEF));
+
+    //汉堡
+    public static final Item BURGER = register("burger",Item::new , new Item.Settings()
+            .maxCount(64).food(FoodCharacteristic.NETHERITE_APPLE_COMPONENT));
 }

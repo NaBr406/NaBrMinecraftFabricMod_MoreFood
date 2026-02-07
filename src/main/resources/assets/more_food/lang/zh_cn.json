@@ -17,5 +17,12 @@
   "item.more_food.green_apple": "青苹果",
   "item.more_food.lightning_apple": "雷电苹果",
   "item.more_food.infinite_apple": "无限苹果",
-  "effect.more_food.amaterasu": "阿玛特拉斯"
+  "effect.more_food.amaterasu": "天照",
+  "effect.more_food.tsukuyomi": "月读",
+  "effect.more_food.trueamaterasupower": "阿玛特拉斯",
+  "item.more_food.ender_apple": "末影苹果",
+  "item.more_food.obsidian_apple": "黑曜石苹果",
+  "item.more_food.meatball": "肉丸",
+  "item.more_food.burger": "汉堡",
+  "item.more_food.ground_meat": "肉沫"
 }
