@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"BabyLootMixin",
-		"AppleResultMixin"
+		"AppleResultMixin",
+		"EffectMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,6 +1,8 @@
 package com.nabr.morefood;
 
-import com.nabr.morefood.effect.AMaTeRaSuEffect;
+import com.nabr.morefood.effect.AmaterasuEffect;
+import com.nabr.morefood.effect.TrueAmaTerasuPowerEffect;
+import com.nabr.morefood.effect.TsukuyomiEffect;
 import com.nabr.morefood.item.ItemGroup;
 import com.nabr.morefood.item.ItemMain;
 import com.nabr.morefood.item.ModBlocks;
@@ -23,6 +25,8 @@ public class MoreFood implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static RegistryEntry<StatusEffect> AMATERASU;
+	public static RegistryEntry<StatusEffect> TSUKUYOMI;
+	public static RegistryEntry<StatusEffect> TRUEAMATERASUPOWER;
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -32,7 +36,17 @@ public class MoreFood implements ModInitializer {
 		AMATERASU = Registry.registerReference(
 				Registries.STATUS_EFFECT,
 				Identifier.of(MOD_ID, "amaterasu"),
-				new AMaTeRaSuEffect());
+				new AmaterasuEffect());
+
+		TSUKUYOMI = Registry.registerReference(
+				Registries.STATUS_EFFECT,
+				Identifier.of(MOD_ID, "tsukuyomi"),
+				new TsukuyomiEffect());
+
+		TRUEAMATERASUPOWER = Registry.registerReference(
+				Registries.STATUS_EFFECT,
+				Identifier.of(MOD_ID, "trueamaterasupower"),
+				new TrueAmaTerasuPowerEffect());
 
 		LOGGER.info("Hello Fabric world!");
 		ItemMain.initialize();

@@ -76,4 +76,13 @@ public class FoodCharacteristic {
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.AMATERASU,
                     30*20 , 1) , 1.0F))
             .build();
+
+    public static final ConsumableComponent OBSIDIAN_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,
+                    60*20, 2), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,
+                    60*20, 3), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,
+                    60*20, 2), 1.0f))
+            .build();
 }

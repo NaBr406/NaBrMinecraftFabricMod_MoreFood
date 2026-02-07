@@ -33,6 +33,11 @@ public class ItemGroup {
                 entries.add(ItemMain.GREEN_APPLE);
                 entries.add(ItemMain.LIGHTNING_APPLE);
                 entries.add(ItemMain.INFINITE_APPLE);
+                entries.add(ItemMain.ENDER_APPLE);
+                entries.add(ItemMain.OBSIDIAN_APPLE);
+                entries.add(ItemMain.BURGER);
+                entries.add(ItemMain.MEATBALL);
+                entries.add(ItemMain.GROUND_MEAT);
             })
             .build();
     public static void initialize(){

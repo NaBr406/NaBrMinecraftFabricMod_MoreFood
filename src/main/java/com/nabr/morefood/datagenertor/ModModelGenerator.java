@@ -35,5 +35,10 @@ public class ModModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(ItemMain.NETHERITE_APPLE , Models.GENERATED);
         itemModelGenerator.register(ItemMain.REDSTONE_APPLE , Models.GENERATED);
         itemModelGenerator.register(ItemMain.INFINITE_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.ENDER_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.OBSIDIAN_APPLE , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.BURGER , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.GROUND_MEAT , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.MEATBALL , Models.GENERATED);
     }
 }
