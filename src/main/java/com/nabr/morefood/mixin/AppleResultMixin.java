@@ -43,8 +43,11 @@ public class AppleResultMixin {
         }
         if(!world.isClient && stack.isOf(ItemMain.INFINITE_APPLE ) && !user.isInCreativeMode()){
             if(user instanceof PlayerEntity player){
-                ItemStack drop = new ItemStack(ItemMain.INFINITE_APPLE , 1);
-                player.getInventory().insertStack(drop);
+                ItemStack returnStack = new ItemStack(ItemMain.INFINITE_APPLE, 1);
+                if (!player.getInventory().insertStack(returnStack)) {
+                    // 背包满了，掉落在玩家位置
+                    player.dropItem(returnStack, false);
+                }
                 Text eatFinishText = Text.literal("我又出来了");
                 player.sendMessage(eatFinishText,false);
             }
