@@ -16,7 +16,11 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.nabr.morefood.MoreFood"
+			"com.nabr.morefood.MoreFood",
+			"com.nabr.morefood.entity.modlivingentity.EntityMain"
+		],
+		"client": [
+			"com.nabr.morefood.entity.modlivingentity.EntityMainClient"
 		],
 		"fabric-datagen": [
 			"com.nabr.morefood.MoreFoodDataGenerator"
