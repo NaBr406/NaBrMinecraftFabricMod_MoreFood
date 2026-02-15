@@ -11,7 +11,7 @@ import java.util.List;
 
 public class AmaterasuEffect extends StatusEffect {
 	public AmaterasuEffect() {
-        super(StatusEffectCategory.BENEFICIAL, // 药水效果是有益的还是有害的
+        super(StatusEffectCategory.BENEFICIAL,
                 0xFFFFE0);
     }
     public boolean canApplyUpdateEffect(int duration, int amplifier) {

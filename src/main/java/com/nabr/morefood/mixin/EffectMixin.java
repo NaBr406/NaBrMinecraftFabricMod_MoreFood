@@ -24,8 +24,6 @@ public abstract class EffectMixin {
                 entity.hasStatusEffect(MoreFood.AMATERASU);
 
         if (hasRequirement) {
-            // 2. 性能优化：检查是否已经有效果，且持续时间是否快到了（比如少于 5 秒/100 tick）
-            // 这样每 5 秒才会执行一次 addStatusEffect，而不是每秒 20 次
             StatusEffectInstance current = entity.getStatusEffect(MoreFood.TRUEAMATERASUPOWER);
             if (current == null || current.getDuration() < 100) {
                 entity.addStatusEffect(new StatusEffectInstance(MoreFood.TRUEAMATERASUPOWER, 200, 0, true, false));
