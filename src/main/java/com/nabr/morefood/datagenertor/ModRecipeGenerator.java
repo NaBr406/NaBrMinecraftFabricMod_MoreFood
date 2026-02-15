@@ -157,8 +157,38 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         .group("more_food")
                         .criterion(hasItem(Items.APPLE), conditionsFromItem(ModBlocks.APPLE_BLOCK))
                         .offerTo(exporter);
-            }
 
+                createShaped(RecipeCategory.FOOD, ItemMain.ENDER_APPLE , 1 )
+                        .pattern(" C ")
+                        .pattern("ADA")
+                        .pattern(" C ")
+                        .input('A',Items.ENDER_PEARL)
+                        .input('D',ItemMain.DIAMOND_APPLE)
+                        .input('C',Items.ENDER_EYE)
+                        .group("more_food")
+                        .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.FOOD, ItemMain.OBSIDIAN_APPLE , 1 )
+                        .pattern("OOO")
+                        .pattern("OAO")
+                        .pattern("OOO")
+                        .input('O',Items.OBSIDIAN)
+                        .input('A',Items.APPLE)
+                        .group("more_food")
+                        .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.FOOD, ItemMain.TSUKUYOMI_APPLE , 1 )
+                        .pattern(" B ")
+                        .pattern("BAB")
+                        .pattern(" B ")
+                        .input('A',Items.APPLE)
+                        .input('B',ItemMain.QZC_EYE)
+                        .group("more_food")
+                        .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                        .offerTo(exporter);
+            }
         };
     }
 

@@ -38,6 +38,8 @@ public class ItemGroup {
                 entries.add(ItemMain.BURGER);
                 entries.add(ItemMain.MEATBALL);
                 entries.add(ItemMain.GROUND_MEAT);
+                entries.add(ItemMain.TSUKUYOMI_APPLE);
+                entries.add(ItemMain.QZC_EYE);
             })
             .build();
     public static void initialize(){

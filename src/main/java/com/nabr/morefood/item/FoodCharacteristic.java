@@ -85,4 +85,10 @@ public class FoodCharacteristic {
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,
                     60*20, 2), 1.0f))
             .build();
+
+    public static final ConsumableComponent TSUKUYOMI_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.TSUKUYOMI,
+                    30*20, 1), 1.0f))
+            .build();
+
 }

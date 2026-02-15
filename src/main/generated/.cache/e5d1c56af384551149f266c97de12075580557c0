@@ -20,7 +20,9 @@ faeec1699db644414a177e2a6ad95f6e3e803ddd assets/more_food/items/little_pork.json
 132f10ee905f58fca39a963eacb4a830d0c4556a assets/more_food/items/meatball.json
 3d1a43a85d064dda2c2e58d273b5482549ca7e09 assets/more_food/items/netherite_apple.json
 286bb57419c2fc6b63cacb1ce60361f07bb96f17 assets/more_food/items/obsidian_apple.json
+bad41574769fffcd439a62164ba1711383028c24 assets/more_food/items/qzc_eye.json
 ba4d384c0e93ed8057c4951377dbf1ee503b6312 assets/more_food/items/redstone_apple.json
+0c090769e65ed9077b47df5668ee5008cd78c914 assets/more_food/items/tsukuyomi_apple.json
 07064e57dc71cab2104aa52e0d1ccec62355100c assets/more_food/models/block/apple_block.json
 5f4c666cbfbea2ed96ba8cd2ecb5c7c391ad928c assets/more_food/models/item/apple_sword.json
 5f373f136e833d3ccf6709bb4fd289a885eadc5f assets/more_food/models/item/burger.json
@@ -42,4 +44,6 @@ a65fa317f0126dad80dd3e18650fab471ece73a7 assets/more_food/models/item/diamond_ap
 ac866cc68f75c9f294a9cb1ec5287da9d1fae6b6 assets/more_food/models/item/meatball.json
 fa99bc72957a95ab060a1fdce76ae182764af6e1 assets/more_food/models/item/netherite_apple.json
 a0d8d026308c1d4e96991594681fa8a80a3ace80 assets/more_food/models/item/obsidian_apple.json
+b2bcea7aa7befcfba30f227716972ead23d5d11f assets/more_food/models/item/qzc_eye.json
 096be6b2083bc2216083be20291f9ced0646e87b assets/more_food/models/item/redstone_apple.json
+3befa088160103f4e7e1f77c8532ddb37b142d60 assets/more_food/models/item/tsukuyomi_apple.json
