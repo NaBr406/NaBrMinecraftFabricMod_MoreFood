@@ -60,14 +60,20 @@ public class ItemMain {
     public static final Item LIGHTNING_APPLE = register("lightning_apple",
             Item::new,new Item.Settings().
                     maxCount(64).
-                    food(FoodCharacteristic.RAW_MEAT_COMPONENT));
+                    food(FoodComponents.APPLE));
 
     //无限苹果
     public static final Item INFINITE_APPLE = register("infinite_apple",
             Item::new , new Item.Settings().
                     maxCount(1).
-                    food(FoodCharacteristic.RAW_MEAT_COMPONENT));
+                    food(FoodComponents.APPLE));
 
+    //月读苹果
+    public static final Item TSUKUYOMI_APPLE = register("tsukuyomi_apple",
+            Item::new , new Item.Settings().
+                    maxCount(64).
+                    food(FoodComponents.APPLE ,
+                            FoodCharacteristic.TSUKUYOMI_APPLE_CONSUMABLE_COMPONENT));
     //apple_sword 苹果剑
     public static final Item APPLE_SWORD = register(
             "apple_sword",
@@ -75,6 +81,10 @@ public class ItemMain {
             new Item.Settings().
                     sword(ModToolMaterial.APPLE_SWORD_MATERIAL, 1f, 1f)
     );
+    //qzc的眼睛
+    public static final Item QZC_EYE = register("qzc_eye",Item::new , new Item.Settings()
+            .maxCount(64));
+
     //小猪肉
     public static final Item LITTLE_PORK = register("little_pork", Item::new , new Item.Settings()
             .maxCount(64).food(FoodCharacteristic.RAW_MEAT_COMPONENT));

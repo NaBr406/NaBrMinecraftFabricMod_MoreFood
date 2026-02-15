@@ -33,6 +33,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
     public static final RegistryKey<LootTable> MOD_PIG_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("minecraft" , "entities/pig"));
     public static final RegistryKey<LootTable> MOD_COW_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("minecraft" , "entities/cow"));
     public static final RegistryKey<LootTable> MOD_SHEEP_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("minecraft" , "entities/sheep"));
+    public static final RegistryKey<LootTable> QZC_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("more_food" , "entities/qzc"));
     @Override
     public void accept(BiConsumer<RegistryKey<LootTable>, LootTable.Builder> lootTableBiConsumer) {
         //babyPig掉落池
@@ -96,8 +97,20 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                 .pool(minecraftMeatPoolBuild(Items.MUTTON , Items.COOKED_MUTTON , 0.0F , 3.0F , 1.0F))
                 .pool(modBabyMeatPoolBuild(ItemMain.LITTLE_MUTTON , ItemMain.COOKED_LITTLE_MUTTON  , 0.0F , 3.0F , 1.0F))
         );
+
+        //秦宗超的掉落
+        lootTableBiConsumer.accept(QZC_LOOTPOOL , LootTable.builder()
+                .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 1.0f , 2.0f , 2.0f))
+        );
     }
 
+    //简单的单物品掉落
+    public LootPool.Builder easyItemLootPoolBuild(Item item , float min , float max , float count){
+        return LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(count))
+                .with(ItemEntry.builder(item)
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(min,max))));
+    }
 
     //一键创建原版肉类掉落
     public LootPool.Builder minecraftMeatPoolBuild(Item meat , Item cookedMeat , float min , float max , float count){

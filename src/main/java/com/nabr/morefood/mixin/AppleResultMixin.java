@@ -1,8 +1,8 @@
 package com.nabr.morefood.mixin;
 
+import com.nabr.morefood.entity.modlivingentity.qzc.QZCEntity;
 import com.nabr.morefood.item.ItemMain;
-import net.minecraft.client.network.PlayerListEntry;
-import net.minecraft.client.render.DimensionEffects;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
@@ -13,7 +13,6 @@ import net.minecraft.network.packet.s2c.play.PositionFlag;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -31,14 +30,19 @@ public class AppleResultMixin {
     private void LinghtningEatFinish(ItemStack stack, World world, LivingEntity user , CallbackInfoReturnable<ItemStack> cir){
         if(!world.isClient && stack.isOf(ItemMain.LIGHTNING_APPLE)){
             if(user instanceof PlayerEntity player){
-                BlockPos frontOfPlayer = player.getBlockPos().offset(player.getHorizontalFacing(), 10);
+                //BlockPos frontOfPlayer = player.getBlockPos().offset(player.getHorizontalFacing(), 10);
                 // 创建并生成闪电
-                Box box = user.getBoundingBox().expand(5.0);
+                Box box = user.getBoundingBox().expand(20.0);
                 List<LivingEntity> targets = world.getEntitiesByClass(LivingEntity.class , box , e -> e != user);
                 for(LivingEntity target : targets){
                     LightningEntity lightningBolt = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
                     lightningBolt.setPosition(target.getX(), target.getY(), target.getZ());
                     world.spawnEntity(lightningBolt);
+                    if(target instanceof QZCEntity){
+                        target.remove(Entity.RemovalReason.KILLED);
+                        Text SendText = Text.literal("qzc受到了天罚");
+                        player.sendMessage(SendText, false);
+                    }
                 }
                 String UserName = player.getName().getString();
                 Text eatFinishText = Text.literal("哪在打雷");
@@ -65,7 +69,10 @@ public class AppleResultMixin {
         if(!world.isClient && stack.isOf(ItemMain.ENDER_APPLE )){
             if(user instanceof PlayerEntity player){
                 MinecraftServer server = player.getServer();
-                ServerWorld getEndId = server.getWorld(World.END);
+                ServerWorld getEndId = null;
+                if (server != null) {
+                    getEndId = server.getWorld(World.END);
+                }
                 double destX = 100.5;
                 double destY = 49.0;
                 double destZ = 0.5;
