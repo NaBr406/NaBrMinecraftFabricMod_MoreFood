@@ -14,6 +14,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Mixin(Item.class)
@@ -31,11 +33,13 @@ public class AppleResultMixin {
             if(user instanceof PlayerEntity player){
                 BlockPos frontOfPlayer = player.getBlockPos().offset(player.getHorizontalFacing(), 10);
                 // 创建并生成闪电
-                LightningEntity lightningBolt = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
-                //ZombieEntity zombie = new ZombieEntity(EntityType.ZOMBIE,world);
-                //zombie.setPosition(player.getPos());
-                lightningBolt.setPosition(frontOfPlayer.toCenterPos());
-                world.spawnEntity(lightningBolt);
+                Box box = user.getBoundingBox().expand(5.0);
+                List<LivingEntity> targets = world.getEntitiesByClass(LivingEntity.class , box , e -> e != user);
+                for(LivingEntity target : targets){
+                    LightningEntity lightningBolt = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
+                    lightningBolt.setPosition(target.getX(), target.getY(), target.getZ());
+                    world.spawnEntity(lightningBolt);
+                }
                 String UserName = player.getName().getString();
                 Text eatFinishText = Text.literal("哪在打雷");
                 player.sendMessage(eatFinishText,false);
@@ -66,7 +70,7 @@ public class AppleResultMixin {
                 double destY = 49.0;
                 double destZ = 0.5;
 
-                // 3. 设置旋转角度 (通常朝向西，即 yaw = 90)
+                // 3. 设置旋转角度 (朝向西，即 yaw = 90)
                 float yaw = 90.0f;
                 float pitch = 0.0f;
 

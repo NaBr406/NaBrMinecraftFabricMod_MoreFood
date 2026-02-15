@@ -53,12 +53,12 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                                 //.conditionally(RandomChanceLootCondition.builder(0.5F))
                                 .conditionally(EntityPropertiesLootCondition.builder(
                                         LootContext.EntityTarget.THIS,
-                                        EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().isBaby(true))
+                                        EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().isBaby(true).onFire(false))
                                 ))
                         )
                 )
                 //成年猪正常掉落
-                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(3.0F))
+                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F))
                         .with(ItemEntry.builder(Items.PORKCHOP)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
                                 //限制条件
@@ -70,7 +70,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                         )
                 )
                 //成年猪着火掉落
-                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(3.0F))
+                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F))
                         .with(ItemEntry.builder(Items.COOKED_PORKCHOP)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
                                 //限制条件 isBaby onFire 掉熟的

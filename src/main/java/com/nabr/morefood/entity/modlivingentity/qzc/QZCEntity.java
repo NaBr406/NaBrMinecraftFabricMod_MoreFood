@@ -1,4 +1,4 @@
-package com.nabr.morefood.entity.modlivingentity;
+package com.nabr.morefood.entity.modlivingentity.qzc;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
