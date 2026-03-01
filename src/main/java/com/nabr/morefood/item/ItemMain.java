@@ -2,6 +2,7 @@ package com.nabr.morefood.item;
 
 //import com.nabr.morefood.item.useresult.InfiniteApple;
 //import com.nabr.morefood.item.useresult.LightningApple;
+import com.nabr.morefood.MoreFood;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.Item;
@@ -21,7 +22,7 @@ public class ItemMain {
         return Items.register(registryKey, factory, settings);
     }
     public static void initialize() {
-        System.out.println("物品已加载!");
+        MoreFood.LOGGER.info("物品已加载");
     }
     //注册diamond apple
     public static final Item DIAMOND_APPLE = register("diamond_apple",Item::new, new Item.Settings().maxCount(64).
@@ -49,18 +50,18 @@ public class ItemMain {
 
     // 末影苹果
     public static final Item ENDER_APPLE = register("ender_apple" , Item::new , new Item.Settings().maxCount(64).
-            food(FoodComponents.APPLE));
+            food(FoodCharacteristic.RAW_MEAT_COMPONENT));
 
     //黑曜石苹果
     public static final Item OBSIDIAN_APPLE = register("obsidian_apple" , Item::new , new Item.Settings().maxCount(64).
-            food(FoodComponents.APPLE,
+            food(FoodCharacteristic.RAW_MEAT_COMPONENT,
                     FoodCharacteristic.OBSIDIAN_APPLE_CONSUMABLE_COMPONENT));
 
     //雷击苹果
     public static final Item LIGHTNING_APPLE = register("lightning_apple",
             Item::new,new Item.Settings().
                     maxCount(64).
-                    food(FoodComponents.APPLE));
+                    food(FoodCharacteristic.RAW_MEAT_COMPONENT));
 
     //无限苹果
     public static final Item INFINITE_APPLE = register("infinite_apple",
@@ -72,7 +73,7 @@ public class ItemMain {
     public static final Item TSUKUYOMI_APPLE = register("tsukuyomi_apple",
             Item::new , new Item.Settings().
                     maxCount(64).
-                    food(FoodComponents.APPLE ,
+                    food(FoodCharacteristic.RAW_MEAT_COMPONENT ,
                             FoodCharacteristic.TSUKUYOMI_APPLE_CONSUMABLE_COMPONENT));
     //apple_sword 苹果剑
     public static final Item APPLE_SWORD = register(

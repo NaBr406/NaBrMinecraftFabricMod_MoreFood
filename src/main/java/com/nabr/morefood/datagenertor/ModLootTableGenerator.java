@@ -96,15 +96,16 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
         lootTableBiConsumer.accept(MOD_SHEEP_LOOTPOOL , LootTable.builder()
                 .pool(minecraftMeatPoolBuild(Items.MUTTON , Items.COOKED_MUTTON , 0.0F , 3.0F , 1.0F))
                 .pool(modBabyMeatPoolBuild(ItemMain.LITTLE_MUTTON , ItemMain.COOKED_LITTLE_MUTTON  , 0.0F , 3.0F , 1.0F))
+                .pool(easyItemLootPoolBuild(Items.WHITE_WOOL,1,1,1))
         );
 
         //秦宗超的掉落
         lootTableBiConsumer.accept(QZC_LOOTPOOL , LootTable.builder()
-                .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 1.0f , 2.0f , 2.0f))
+                .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 0.0f , 2.0f , 1.0f))
         );
     }
 
-    //简单的单物品掉落
+    // 简单的单物品掉落
     public LootPool.Builder easyItemLootPoolBuild(Item item , float min , float max , float count){
         return LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(count))
@@ -112,7 +113,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(min,max))));
     }
 
-    //一键创建原版肉类掉落
+    // 一键创建原版肉类掉落
     public LootPool.Builder minecraftMeatPoolBuild(Item meat , Item cookedMeat , float min , float max , float count){
         return LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(count))

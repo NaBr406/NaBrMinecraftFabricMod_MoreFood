@@ -25,7 +25,7 @@ public abstract class EffectMixin {
 
         if (hasRequirement) {
             StatusEffectInstance current = entity.getStatusEffect(MoreFood.TRUEAMATERASUPOWER);
-            if (current == null && current.getDuration() < 100) {
+            if (current == null || current.getDuration() < 100) {
                 entity.addStatusEffect(new StatusEffectInstance(MoreFood.TRUEAMATERASUPOWER, 200, 0, true, false));
                 }
             }
