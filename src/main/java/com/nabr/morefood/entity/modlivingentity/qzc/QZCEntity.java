@@ -4,13 +4,14 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class QZCEntity extends PathAwareEntity {
-    public QZCEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class QZCEntity extends HostileEntity {
+    public QZCEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
     public static DefaultAttributeContainer.Builder createAttributes() {
