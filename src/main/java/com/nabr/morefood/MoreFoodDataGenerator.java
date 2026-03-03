@@ -1,10 +1,9 @@
 package com.nabr.morefood;
 
 import com.nabr.morefood.datagenertor.*;
-import com.nabr.morefood.structures.ModBiomeTagProvider;
-import com.nabr.morefood.structures.ModStructures;
-import com.nabr.morefood.structures.ModWorldgenBootstrap;
-import com.nabr.morefood.structures.ModWorldgenProvider;
+import com.nabr.morefood.datagenertor.structures.appletree.ModBiomeTagProvider;
+import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenBootstrap;
+import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

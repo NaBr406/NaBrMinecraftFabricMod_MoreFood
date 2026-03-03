@@ -1,4 +1,4 @@
-package com.nabr.morefood.structures;
+package com.nabr.morefood.datagenertor.structures.appletree;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
