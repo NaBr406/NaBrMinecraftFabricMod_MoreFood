@@ -1,4 +1,4 @@
-package com.nabr.morefood.structures;
+package com.nabr.morefood.datagenertor.structures.appletree;
 
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

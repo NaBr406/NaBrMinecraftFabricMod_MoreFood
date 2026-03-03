@@ -1,4 +1,4 @@
-package com.nabr.morefood.structures;
+package com.nabr.morefood.datagenertor.structures.appletree;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.registry.Registerable;
