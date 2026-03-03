@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 87654321,
+    "separation": 0,
+    "spacing": 20
+  },
+  "structures": [
+    {
+      "structure": "more_food:apple_tree",
+      "weight": 1
+    }
+  ]
+}
