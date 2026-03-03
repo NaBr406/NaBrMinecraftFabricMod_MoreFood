@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "more_food",
+  "key": {
+    "A": "minecraft:apple",
+    "B": "more_food:qzc_eye"
+  },
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:tsukuyomi_apple"
+  }
+}

@@ -63,7 +63,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                         .with(ItemEntry.builder(Items.PORKCHOP)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
                                 //限制条件
-                                .conditionally(RandomChanceLootCondition.builder(0.5F))
+                                .conditionally(RandomChanceLootCondition.builder(1.0F))
                                 .conditionally(EntityPropertiesLootCondition.builder(
                                         LootContext.EntityTarget.THIS,
                                         EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().onFire(false).isBaby(false))
@@ -75,7 +75,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
                         .with(ItemEntry.builder(Items.COOKED_PORKCHOP)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
                                 //限制条件 isBaby onFire 掉熟的
-                                .conditionally(RandomChanceLootCondition.builder(0.5F))
+                                .conditionally(RandomChanceLootCondition.builder(1.0F))
                                 .conditionally(EntityPropertiesLootCondition.builder(
                                         LootContext.EntityTarget.THIS,
                                         EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().onFire(true).isBaby(false))
