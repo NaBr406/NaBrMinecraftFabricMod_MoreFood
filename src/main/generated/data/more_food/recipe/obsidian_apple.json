@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "more_food",
+  "key": {
+    "A": "minecraft:apple",
+    "O": "minecraft:obsidian"
+  },
+  "pattern": [
+    "OOO",
+    "OAO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:obsidian_apple"
+  }
+}

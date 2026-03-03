@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "more_food",
+  "ingredients": [
+    "#minecraft:mod_meat"
+  ],
+  "result": {
+    "count": 4,
+    "id": "more_food:ground_meat"
+  }
+}

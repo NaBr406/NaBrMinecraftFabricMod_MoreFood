@@ -1,0 +1,4 @@
+// 1.21.7	-999999999-01-01T00:00:00	more_food/MoreFood Worldgen
+332097c38e122de34edcd2c79b3db272a4f88778 data/more_food/worldgen/structure/apple_tree.json
+fb829214c16b4cf0e97ec97dbf0ff02bddcfaa5d data/more_food/worldgen/structure_set/apple_tree_set.json
+db049a76a1bb413a4bf8160049665b49103fa12f data/more_food/worldgen/template_pool/apple_tree_pool.json
