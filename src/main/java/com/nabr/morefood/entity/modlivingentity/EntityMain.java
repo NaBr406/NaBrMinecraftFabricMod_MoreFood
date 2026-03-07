@@ -1,5 +1,6 @@
 package com.nabr.morefood.entity.modlivingentity;
 
+import com.nabr.morefood.entity.modlivingentity.angerqzc.AngerQZCEntity;
 import com.nabr.morefood.entity.modlivingentity.qzc.QZCEntity;
 import com.nabr.morefood.entity.modlivingentity.qzc.QZCSpawnRule;
 import net.fabricmc.api.ModInitializer;
@@ -29,9 +30,18 @@ public class EntityMain implements ModInitializer {
                     .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of("more_food", "qzc")))
     );
 
+    public static final EntityType<AngerQZCEntity> ANGER_QZC = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of("more_food", "anger_qzc"),
+            EntityType.Builder.create(AngerQZCEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(2.0f, 2.0f)
+                    .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of("more_food", "anger_qzc")))
+    );
+
     @Override
     public void onInitialize() {
         FabricDefaultAttributeRegistry.register(QZC, QZCEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ANGER_QZC, AngerQZCEntity.createAngerQZCAttributes());
         QZCSpawnRule.QZCSpawnRule();
     }
 }
