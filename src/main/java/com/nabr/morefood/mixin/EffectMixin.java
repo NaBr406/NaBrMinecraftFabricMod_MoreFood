@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,16 +20,26 @@ public abstract class EffectMixin {
         LivingEntity entity = (LivingEntity)(Object)this;
         if (entity.getWorld().isClient) return;
         if(entity.age % 20 == 0){
-        // 只有拥有特定效果时才触发
-        boolean hasRequirement = entity.hasStatusEffect(MoreFood.TSUKUYOMI) &&
+        // 只有拥有特定效果时才触发 添加TRUEAMATERASU逻辑
+            boolean hasRequirement = entity.hasStatusEffect(MoreFood.TSUKUYOMI) &&
                 entity.hasStatusEffect(MoreFood.AMATERASU);
 
-        if (hasRequirement) {
+            if (hasRequirement) {
             StatusEffectInstance current = entity.getStatusEffect(MoreFood.TRUEAMATERASUPOWER);
-            if (current == null || current.getDuration() < 100) {
+                if (current == null || current.getDuration() < 100) {
                 entity.addStatusEffect(new StatusEffectInstance(MoreFood.TRUEAMATERASUPOWER, 200, 0, true, false));
                 }
             }
+
+
+            boolean hasPowerEffect = entity.hasStatusEffect(MoreFood.POWER);
+            if(!hasPowerEffect && entity instanceof ServerPlayerEntity serverPlayerEntity){
+                if( !serverPlayerEntity.isCreative() && !serverPlayerEntity.isSpectator() ) {
+                    serverPlayerEntity.getAbilities().allowFlying = false;
+                    serverPlayerEntity.sendAbilitiesUpdate();
+                }
+            }
+
         }
     }
 }
