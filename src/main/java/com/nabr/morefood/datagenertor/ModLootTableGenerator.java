@@ -34,8 +34,10 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
     public static final RegistryKey<LootTable> MOD_COW_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("minecraft" , "entities/cow"));
     public static final RegistryKey<LootTable> MOD_SHEEP_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("minecraft" , "entities/sheep"));
     public static final RegistryKey<LootTable> QZC_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("more_food" , "entities/qzc"));
+    public static final RegistryKey<LootTable> ANGER_QZC_LOOTPOOL = RegistryKey.of(RegistryKeys.LOOT_TABLE , Identifier.of("more_food" , "entities/anger_qzc"));
     @Override
     public void accept(BiConsumer<RegistryKey<LootTable>, LootTable.Builder> lootTableBiConsumer) {
+
         //babyPig掉落池
         lootTableBiConsumer.accept(MOD_PIG_LOOTPOOL, LootTable.builder()
                 .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F))
@@ -102,6 +104,11 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
         //秦宗超的掉落
         lootTableBiConsumer.accept(QZC_LOOTPOOL , LootTable.builder()
                 .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 0.0f , 2.0f , 1.0f))
+        );
+
+        //angerqzc掉落
+        lootTableBiConsumer.accept(ANGER_QZC_LOOTPOOL , LootTable.builder()
+                .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 1.0f ,1.0f ,1.0f))
         );
     }
 

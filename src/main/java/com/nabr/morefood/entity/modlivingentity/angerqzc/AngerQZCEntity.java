@@ -18,11 +18,12 @@ public class AngerQZCEntity extends HostileEntity {
     }
     public static DefaultAttributeContainer.Builder createAngerQZCAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.MAX_HEALTH, 100.0D)
-                .add(EntityAttributes.MOVEMENT_SPEED, 0.5D)
-                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 5.0D)
-                .add(EntityAttributes.ARMOR, 4.0D)
-                .add(EntityAttributes.ATTACK_DAMAGE , 15.0);
+                .add(EntityAttributes.MAX_HEALTH, 100.0D)//最大生命
+                .add(EntityAttributes.MOVEMENT_SPEED, 0.5D)//移动速度
+                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 5.0D)//击退抗性
+                .add(EntityAttributes.ARMOR, 4.0D)//护甲
+                .add(EntityAttributes.ATTACK_DAMAGE , 20.0)//伤害
+                .add(EntityAttributes.FOLLOW_RANGE, 50.0D);//追踪半径
     }
     protected  void initGoals() {
         this.goalSelector.add(0 , new SwimGoal(this));

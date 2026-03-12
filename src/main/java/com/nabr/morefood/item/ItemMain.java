@@ -75,6 +75,8 @@ public class ItemMain {
                     maxCount(64).
                     food(FoodCharacteristic.RAW_MEAT_COMPONENT ,
                             FoodCharacteristic.TSUKUYOMI_APPLE_CONSUMABLE_COMPONENT));
+
+
     //apple_sword 苹果剑
     public static final Item APPLE_SWORD = register(
             "apple_sword",
@@ -82,6 +84,7 @@ public class ItemMain {
             new Item.Settings().
                     sword(ModToolMaterial.APPLE_SWORD_MATERIAL, 1f, 1f)
     );
+
     //qzc的眼睛
     public static final Item QZC_EYE = register("qzc_eye",Item::new , new Item.Settings()
             .maxCount(64));
@@ -121,4 +124,12 @@ public class ItemMain {
     //汉堡
     public static final Item BURGER = register("burger",Item::new , new Item.Settings()
             .maxCount(64).food(FoodCharacteristic.NETHERITE_APPLE_COMPONENT));
+
+    //AngerQZCLoot
+    public static final Item ANGER_QZC_LOOT = register("anger_qzc_loot",Item::new , new Item.Settings()
+            .maxCount(1));
+
+    //DoubleAngerQZCLoot
+    public static final Item DOUBLE_ANGER_QZC_LOOT = register("double_anger_qzc_loot",Item::new , new Item.Settings()
+            .maxCount(1));
 }
