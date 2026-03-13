@@ -108,7 +108,7 @@ public class ModLootTableGenerator extends SimpleFabricLootTableProvider {
 
         //angerqzc掉落
         lootTableBiConsumer.accept(ANGER_QZC_LOOTPOOL , LootTable.builder()
-                .pool(easyItemLootPoolBuild(ItemMain.QZC_EYE , 1.0f ,1.0f ,1.0f))
+                .pool(easyItemLootPoolBuild(ItemMain.ANGER_QZC_POINTER_FRAGMENT , 1.0f ,1.0f ,1.0f))
         );
     }
 

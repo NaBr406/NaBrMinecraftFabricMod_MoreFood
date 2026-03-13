@@ -189,13 +189,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.BREWING , ItemMain.DOUBLE_ANGER_QZC_LOOT , 1)
+                createShaped(RecipeCategory.BREWING , ItemMain.ANGER_QZC_POINTER , 1)
                         .pattern("AAA")
                         .pattern("AAA")
                         .pattern("AAA")
-                        .input('A',ItemMain.ANGER_QZC_LOOT)
+                        .input('A',ItemMain.ANGER_QZC_POINTER_FRAGMENT)
                         .group("more_food")
-                        .criterion(hasItem(ItemMain.ANGER_QZC_LOOT), conditionsFromItem(Items.APPLE))
+                        .criterion(hasItem(ItemMain.ANGER_QZC_POINTER), conditionsFromItem(Items.APPLE))
                         .offerTo(exporter);
 
             }

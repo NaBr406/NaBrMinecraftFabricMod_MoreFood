@@ -42,5 +42,6 @@ public class ModModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(ItemMain.BURGER , Models.GENERATED);
         itemModelGenerator.register(ItemMain.GROUND_MEAT , Models.GENERATED);
         itemModelGenerator.register(ItemMain.MEATBALL , Models.GENERATED);
+        itemModelGenerator.register(ItemMain.POWER_APPLE, Models.GENERATED);
     }
 }

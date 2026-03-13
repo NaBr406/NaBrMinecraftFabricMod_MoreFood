@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "more_food",
+  "key": {
+    "A": "more_food:anger_qzc_pointer_fragment"
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "more_food:anger_qzc_pointer"
+  }
+}

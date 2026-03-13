@@ -31,11 +31,12 @@ public abstract class EffectMixin {
                 }
             }
 
-
+            //判断Power效果有无 若无则取消飞行权限
             boolean hasPowerEffect = entity.hasStatusEffect(MoreFood.POWER);
             if(!hasPowerEffect && entity instanceof ServerPlayerEntity serverPlayerEntity){
                 if( !serverPlayerEntity.isCreative() && !serverPlayerEntity.isSpectator() ) {
                     serverPlayerEntity.getAbilities().allowFlying = false;
+                    serverPlayerEntity.getAbilities().flying = false;
                     serverPlayerEntity.sendAbilitiesUpdate();
                 }
             }
