@@ -40,6 +40,7 @@ public class ItemGroup {
                 entries.add(ItemMain.GROUND_MEAT);
                 entries.add(ItemMain.TSUKUYOMI_APPLE);
                 entries.add(ItemMain.QZC_EYE);
+                entries.add(ItemMain.POWER_APPLE);
             })
             .build();
     public static void initialize(){

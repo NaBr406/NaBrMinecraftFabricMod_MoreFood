@@ -30,6 +30,18 @@ public class FoodCharacteristic {
             .saturationModifier(10)
             .alwaysEdible()
             .build();
+
+    public static final FoodComponent POWER_APPLE_COMPONENT = new FoodComponent.Builder()
+            //恢复饱食度
+            .nutrition(100)
+            //饱和度
+            .saturationModifier(100)
+            .alwaysEdible()
+            .build();
+
+    public static final ConsumableComponent POWER_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.POWER,600*20 , 0),1.0f))
+            .build();
     //钻石苹果效果
     public static final ConsumableComponent DIAMOND_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
             //给予

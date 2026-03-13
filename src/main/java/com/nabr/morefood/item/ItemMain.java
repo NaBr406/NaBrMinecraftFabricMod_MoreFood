@@ -24,6 +24,11 @@ public class ItemMain {
     public static void initialize() {
         MoreFood.LOGGER.info("物品已加载");
     }
+
+    //power apple
+    public static final Item POWER_APPLE = register("power_apple",Item::new , new Item.Settings().maxCount(64).
+            food(FoodCharacteristic.POWER_APPLE_COMPONENT,
+                     FoodCharacteristic.POWER_APPLE_CONSUMABLE_COMPONENT));
     //注册diamond apple
     public static final Item DIAMOND_APPLE = register("diamond_apple",Item::new, new Item.Settings().maxCount(64).
             food(FoodCharacteristic.DIAMOND_APPLE_COMPONENT,
@@ -126,10 +131,10 @@ public class ItemMain {
             .maxCount(64).food(FoodCharacteristic.NETHERITE_APPLE_COMPONENT));
 
     //AngerQZCLoot
-    public static final Item ANGER_QZC_LOOT = register("anger_qzc_loot",Item::new , new Item.Settings()
+    public static final Item ANGER_QZC_POINTER_FRAGMENT = register("anger_qzc_pointer_fragment",Item::new , new Item.Settings()
             .maxCount(1));
 
     //DoubleAngerQZCLoot
-    public static final Item DOUBLE_ANGER_QZC_LOOT = register("double_anger_qzc_loot",Item::new , new Item.Settings()
+    public static final Item ANGER_QZC_POINTER = register("anger_qzc_pointer",Item::new , new Item.Settings()
             .maxCount(1));
 }

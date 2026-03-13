@@ -1,4 +1,5 @@
 // 1.21.7	-999999999-01-01T00:00:00	more_food/
+acee2d6694ae11ed2884051806be06fc554b61d3 data/more_food/advancement/recipes/brewing/anger_qzc_pointer.json
 d9f9f8cf3ce74414862389e1446eafac7578a866 data/more_food/advancement/recipes/building_blocks/apple_block.json
 39e5cdf72403e8de365bdf28d9c599e1bd060143 data/more_food/advancement/recipes/food/diamond_apple.json
 73d34245dc0b3e6e5ff865c011eb2ece2b2f78de data/more_food/advancement/recipes/food/emerald_apple.json
@@ -15,6 +16,7 @@ a15211dd631b08f35e862b05edcc48d651ebc78e data/more_food/advancement/recipes/misc
 709485a99e7ff4e4bbf26d9e6f6ce5bfd2cc894c data/more_food/advancement/recipes/misc/cooked_little_mutton_from_smelting_little_mutton.json
 8a16e848d5d18bb302218bbb9c113c56a783534e data/more_food/advancement/recipes/misc/cooked_little_pork_from_smelting_little_pork.json
 268e776242991b267a00b8242eb801063c331b44 data/more_food/advancement/recipes/tools/apple_sword.json
+c3aaefa913baf241539552629ad1d4e6fbe3fdbc data/more_food/recipe/anger_qzc_pointer.json
 25ffd9b5923c00d89fc8438a6e168394c987fc33 data/more_food/recipe/apple_block.json
 3523c1d2978c1001d325b21609da4c1038811932 data/more_food/recipe/apple_sword.json
 2703370b7da8e305e580fab17e4630af2ebf16b5 data/more_food/recipe/cooked_little_beef_from_smelting_little_beef.json
