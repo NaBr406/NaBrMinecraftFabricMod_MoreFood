@@ -1,6 +1,8 @@
 package com.nabr.morefood;
 
 import com.nabr.morefood.datagenertor.*;
+import com.nabr.morefood.datagenertor.structures.angerqzchome.WorldgenBootstrap;
+import com.nabr.morefood.datagenertor.structures.angerqzchome.WorldgenProvider;
 import com.nabr.morefood.datagenertor.structures.appletree.ModBiomeTagProvider;
 import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenBootstrap;
 import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenProvider;
@@ -27,5 +29,9 @@ public class MoreFoodDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ModWorldgenBootstrap::bootstrapPools);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ModWorldgenBootstrap::bootstrapStructures);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, ModWorldgenBootstrap::bootstrapStructureSets);
+
+		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, WorldgenBootstrap::bootstrapPools);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, WorldgenBootstrap::bootstrapStructures);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, WorldgenBootstrap::bootstrapStructureSets);
 	}
 }
