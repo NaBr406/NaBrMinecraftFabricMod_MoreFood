@@ -27,8 +27,8 @@ public class AngerQZCEntity extends HostileEntity {
     }
     protected  void initGoals() {
         this.goalSelector.add(0 , new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0D, false));
-        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.goalSelector.add(1 , new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.add(2 , new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.targetSelector.add(0 , new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
 }
