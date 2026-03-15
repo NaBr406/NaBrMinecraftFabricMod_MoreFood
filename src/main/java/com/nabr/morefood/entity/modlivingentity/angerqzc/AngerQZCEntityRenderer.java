@@ -19,6 +19,6 @@ public class AngerQZCEntityRenderer extends BipedEntityRenderer<AngerQZCEntity ,
 
     @Override
     public Identifier getTexture(AngerQZCRenderState state){
-        return Identifier.of("more_food","textures/entity/anger_qzc.png");
+        return Identifier.of("more_food","textures/entity/anger_qzc/anger_qzc.png");
     }
 }

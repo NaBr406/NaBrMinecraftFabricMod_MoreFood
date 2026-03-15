@@ -34,7 +34,7 @@ public class EntityMain implements ModInitializer {
             Registries.ENTITY_TYPE,
             Identifier.of("more_food", "anger_qzc"),
             EntityType.Builder.create(AngerQZCEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(2.0f, 2.0f)
+                    .dimensions(0.9f, 1.6f)
                     .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of("more_food", "anger_qzc")))
     );
 
