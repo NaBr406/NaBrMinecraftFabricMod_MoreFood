@@ -23,6 +23,6 @@ public class ModBiomeTagProvider extends FabricTagProvider<Biome> {
                 .addOptionalTag(BiomeTags.IS_FOREST.id()); // 包含原版所有的森林群系
 
         getTagBuilder(ModStructures.QZC_HOME)
-                .addOptionalTag(BiomeTags.IS_FOREST.id());
+                .addOptionalTag(BiomeTags.IS_OVERWORLD.id());//所有主世界群系
     }
 }
