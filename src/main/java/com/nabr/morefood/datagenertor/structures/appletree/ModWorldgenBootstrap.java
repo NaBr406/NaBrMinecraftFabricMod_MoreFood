@@ -1,6 +1,7 @@
 package com.nabr.morefood.datagenertor.structures.appletree;
 
 import com.mojang.datafixers.util.Pair;
+import com.nabr.morefood.datagenertor.structures.ModStructures;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
