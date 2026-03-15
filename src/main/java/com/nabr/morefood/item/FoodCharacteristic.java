@@ -40,7 +40,8 @@ public class FoodCharacteristic {
             .build();
 
     public static final ConsumableComponent POWER_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
-            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.POWER,600*20 , 0),1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(MoreFood.POWER,1800*20 , 0),1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SATURATION,1800*20 , 0),1.0f))
             .build();
     //钻石苹果效果
     public static final ConsumableComponent DIAMOND_APPLE_CONSUMABLE_COMPONENT = ConsumableComponents.food()
