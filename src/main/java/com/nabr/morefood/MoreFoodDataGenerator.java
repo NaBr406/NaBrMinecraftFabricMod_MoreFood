@@ -1,10 +1,10 @@
 package com.nabr.morefood;
 
 import com.nabr.morefood.datagenertor.*;
-import com.nabr.morefood.datagenertor.structures.angerqzchome.WorldgenBootstrap;
+import com.nabr.morefood.datagenertor.structures.angerqzchome.QZCHomeWorldgenBootstrap;
 import com.nabr.morefood.datagenertor.structures.ModBiomeTagProvider;
-import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenBootstrap;
-import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenProvider;
+import com.nabr.morefood.datagenertor.structures.appletree.AppleTreeWorldgenBootstrap;
+import com.nabr.morefood.datagenertor.structures.ModWorldgenProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -25,12 +25,12 @@ public class MoreFoodDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		// 注册 Bootstrap 数据构建方法
-		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ModWorldgenBootstrap::bootstrapPools);
-		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ModWorldgenBootstrap::bootstrapStructures);
-		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, ModWorldgenBootstrap::bootstrapStructureSets);
+		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, AppleTreeWorldgenBootstrap::bootstrapPools);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, AppleTreeWorldgenBootstrap::bootstrapStructures);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, AppleTreeWorldgenBootstrap::bootstrapStructureSets);
 
-		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, WorldgenBootstrap::bootstrapPools);
-		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, WorldgenBootstrap::bootstrapStructures);
-		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, WorldgenBootstrap::bootstrapStructureSets);
+		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, QZCHomeWorldgenBootstrap::bootstrapPools);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, QZCHomeWorldgenBootstrap::bootstrapStructures);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, QZCHomeWorldgenBootstrap::bootstrapStructureSets);
 	}
 }

@@ -1,6 +1,5 @@
 package com.nabr.morefood.datagenertor.structures;
 
-import com.nabr.morefood.datagenertor.structures.angerqzchome.Structures;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -23,7 +22,7 @@ public class ModBiomeTagProvider extends FabricTagProvider<Biome> {
         getTagBuilder(ModStructures.HAS_APPLE_TREE)
                 .addOptionalTag(BiomeTags.IS_FOREST.id()); // 包含原版所有的森林群系
 
-        getTagBuilder(Structures.QZC_HOME)
+        getTagBuilder(ModStructures.QZC_HOME)
                 .addOptionalTag(BiomeTags.IS_FOREST.id());
     }
 }
