@@ -1,6 +1,7 @@
 package com.nabr.morefood.datagenertor.structures.angerqzchome;
 
 import com.mojang.datafixers.util.Pair;
+import com.nabr.morefood.datagenertor.structures.ModStructures;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -27,7 +28,7 @@ public class WorldgenBootstrap {
     public static void bootstrapPools(Registerable<StructurePool> context) {
         RegistryEntryLookup<StructurePool> poolLookup = context.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
 
-        context.register(Structures.QZC_HOME_POOL, new StructurePool(
+        context.register(ModStructures.QZC_HOME_POOL, new StructurePool(
                 // 注意这里也有改动：getOrThrow 在新版本需要传入 RegistryKey 而不是 Identifier
                 poolLookup.getOrThrow(RegistryKey.of(RegistryKeys.TEMPLATE_POOL, Identifier.of("minecraft", "empty"))),
                 List.of(
@@ -43,14 +44,14 @@ public class WorldgenBootstrap {
         var poolLookup = context.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
         var biomeLookup = context.getRegistryLookup(RegistryKeys.BIOME);
 
-        context.register(Structures.HOME, new JigsawStructure(
+        context.register(ModStructures.HOME, new JigsawStructure(
                 new Structure.Config(
-                        biomeLookup.getOrThrow(Structures.QZC_HOME), // 1. 允许生成的群系标签
+                        biomeLookup.getOrThrow(ModStructures.QZC_HOME), // 1. 允许生成的群系标签
                         java.util.Map.of(),                                   // 2. [新增] 覆盖刷怪配置 (空Map代表没有专属刷怪)
                         GenerationStep.Feature.SURFACE_STRUCTURES,            // 3. 生成阶段
                         StructureTerrainAdaptation.BEARD_THIN                 // 4. 地形适配
                 ),
-                poolLookup.getOrThrow(Structures.QZC_HOME_POOL),
+                poolLookup.getOrThrow(ModStructures.QZC_HOME_POOL),
                 1,
                 ConstantHeightProvider.create(YOffset.fixed(0)),
                 false,
@@ -62,8 +63,8 @@ public class WorldgenBootstrap {
     public static void bootstrapStructureSets(Registerable<StructureSet> context) {
         var structureLookup = context.getRegistryLookup(RegistryKeys.STRUCTURE);
 
-        context.register(Structures.QZC_HOME_SET, new StructureSet(
-                structureLookup.getOrThrow(Structures.HOME),
+        context.register(ModStructures.QZC_HOME_SET, new StructureSet(
+                structureLookup.getOrThrow(ModStructures.HOME),
                 new RandomSpreadStructurePlacement(
                         20, // 最大区块间距
                         0,  // 最小区块间距

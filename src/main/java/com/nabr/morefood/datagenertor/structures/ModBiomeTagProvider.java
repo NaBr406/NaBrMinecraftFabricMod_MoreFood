@@ -1,4 +1,4 @@
-package com.nabr.morefood.datagenertor.structures.appletree;
+package com.nabr.morefood.datagenertor.structures;
 
 import com.nabr.morefood.datagenertor.structures.angerqzchome.Structures;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

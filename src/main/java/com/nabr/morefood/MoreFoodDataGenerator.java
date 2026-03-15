@@ -2,8 +2,7 @@ package com.nabr.morefood;
 
 import com.nabr.morefood.datagenertor.*;
 import com.nabr.morefood.datagenertor.structures.angerqzchome.WorldgenBootstrap;
-import com.nabr.morefood.datagenertor.structures.angerqzchome.WorldgenProvider;
-import com.nabr.morefood.datagenertor.structures.appletree.ModBiomeTagProvider;
+import com.nabr.morefood.datagenertor.structures.ModBiomeTagProvider;
 import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenBootstrap;
 import com.nabr.morefood.datagenertor.structures.appletree.ModWorldgenProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
