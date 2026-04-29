@@ -137,4 +137,8 @@ public class ItemMain {
     //DoubleAngerQZCLoot
     public static final Item ANGER_QZC_POINTER = register("anger_qzc_pointer",Item::new , new Item.Settings()
             .maxCount(1));
+
+    //ThreeDoubleAngerQZCLoot
+    public static final Item ThreeANGER_QZC_POINTER = register("three_anger_qzc_pointer",Item::new , new Item.Settings()
+            .maxCount(1));
 }
