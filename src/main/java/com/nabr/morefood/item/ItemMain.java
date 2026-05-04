@@ -145,4 +145,6 @@ public class ItemMain {
     //没有意义 纯粹给我的github加个小绿块
     public static final Item FOUR_ANGER_QZC_POINTER = register("four_anger_qzc_pointer",Item::new , new Item.Settings()
             .maxCount(1));
+    public static final Item FIVE_ANGER_QZC_POINTER = register("five_anger_qzc_pointer",Item::new , new Item.Settings()
+            .maxCount(1));
 }
