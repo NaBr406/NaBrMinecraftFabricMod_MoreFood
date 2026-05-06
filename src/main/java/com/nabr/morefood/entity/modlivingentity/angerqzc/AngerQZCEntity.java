@@ -77,7 +77,8 @@ public class AngerQZCEntity extends HostileEntity {
             }
         }
     }
-    public boolean tryAttack(Entity target){
+    @Override
+    public boolean tryAttack(ServerWorld world, Entity target){
         if(this instanceof AngerQZCEntity && target instanceof LivingEntity) {
             LivingEntity tar = (LivingEntity)target;
             //血量低于最大生命值1/2直接斩杀
