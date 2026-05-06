@@ -147,4 +147,6 @@ public class ItemMain {
             .maxCount(1));
     public static final Item FIVE_ANGER_QZC_POINTER = register("five_anger_qzc_pointer",Item::new , new Item.Settings()
             .maxCount(1));
+    public static final Item SIX_ANGER_QZC_POINTER = register("six_anger_qzc_pointer",Item::new , new Item.Settings()
+            .maxCount(1));
 }
