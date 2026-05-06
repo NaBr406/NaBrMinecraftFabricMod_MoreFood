@@ -1,6 +1,8 @@
 package com.nabr.morefood.entity.modlivingentity.angerqzc;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
@@ -12,6 +14,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -73,5 +76,15 @@ public class AngerQZCEntity extends HostileEntity {
                 );
             }
         }
+    }
+    public boolean tryAttack(Entity target){
+        if((Object)this instanceof AngerQZCEntity && target instanceof LivingEntity) {
+            LivingEntity tar = (LivingEntity)target;
+            //血量低于最大生命值1/2直接斩杀
+            if(tar.getHealth() <= tar.getMaxHealth()/2) {
+                tar.setHealth(0.0f);
+            }
+        }
+        return super.tryAttack((ServerWorld) getWorld(), target);
     }
 }
