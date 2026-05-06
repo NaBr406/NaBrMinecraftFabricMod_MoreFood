@@ -20,7 +20,7 @@ public abstract class EffectMixin {
         LivingEntity entity = (LivingEntity)(Object)this;
         if (entity.getWorld().isClient) return;
         if(entity.age % 20 == 0){
-        // 只有拥有特定效果时才触发 添加TRUEAMATERASU逻辑
+        // 只有拥有特定效果时才触发 添加TRUE AMATERASU逻辑
             boolean hasRequirement = entity.hasStatusEffect(MoreFood.TSUKUYOMI) &&
                 entity.hasStatusEffect(MoreFood.AMATERASU);
 
